@@ -1,0 +1,215 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+
+  position: sticky;
+}
+
+nav ul {
+  display: flex;
+
+  justify-content: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0px 23px;
+  margin-bottom: 100px;
+
+  a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.5s;
+  }
+  a:hover {
+    color: #0ef;
+  }
+}
+
+/* Header */
+.listing-header {
+  text-align: center;
+  background: linear-gradient(135deg, #0b5394, #073763);
+  color: white;
+  padding: 60px 20px;
+}
+
+.listing-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.listing-header p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Filter Section */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.filters select,
+.filters button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.filters button {
+  background-color: #0b5394;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #073763;
+}
+
+/* Property List */
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+/* Property Card */
+.property-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-8px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.property-card h3 {
+  color: #0b5394;
+  margin: 15px 0 5px;
+  text-align: center;
+}
+
+.property-card p {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  padding: 0 10px 5px;
+}
+
+.property-card .price {
+  color: #e60000;
+  font-weight: bold;
+}
+
+.property-card button {
+  display: block;
+  margin: 10px auto 20px;
+  padding: 10px 20px;
+  background-color: #0b5394;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.property-card button:hover {
+  background-color: #073763;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #f2f2f2;
+  padding: 15px 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+/* 📱 1️⃣ Mobile Phones (up to 480px width) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  header,
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container,
+  section,
+  footer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button,
+  a {
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* 💊 2️⃣ Tablets (481px–768px width) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 95%;
+    margin: auto;
+  }
+
+  .grid-2,
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+/* 💻 3️⃣ Laptops aur bade screens (min 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}

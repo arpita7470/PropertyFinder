@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Register Property for Sale</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+ <nav>
+    
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="form.html">Register</a></li>
+        <li><a href="list.html">Listing</a></li>
+      </ul>
+  </nav>
+
+
+    <div class="form-container">
+        <h1>Register Your Property for Sale</h1>
+        <form id="myform">
+            <label for="ownerName">Owner Name</label>
+            <input type="text" id="ownerName" name="ownerName" required>
+            <label for="contactInfo">Contact Information</label>
+            <input type="text" id="contactInfo" name="contactInfo" required>
+            <label for="propertyTitle">Property Title</label>
+            <input type="text" id="propertyTitle" name="propertyTitle" required>
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType" name="propertyType" required>
+                <option value="">Select Type</option>
+                <option value="house">House</option>
+                <option value="flat">Flat</option>
+                <option value="plot">Plot</option>
+                <option value="commercial">Commercial</option>
+            </select>
+            <label for="location">Location</label>
+            <input type="text" id="location" name="location" required>
+            <label for="price">Price (₹)</label>
+            <input type="number" id="price" name="price" required>
+            <label for="description">Description</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+            <label for="photo">Upload Property Photo</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+            <button type="submit">Register Property</button>
+        </form>
+    </div>
+    <script>
+        //js for form
+document.getElementById('myform').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const token = localStorage.getItem('token');
+  if(!token) {
+    alert('Please login first!');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('name', document.getElementById('ownerName').value);
+  formData.append('phone', document.getElementById('phone').value);
+  formData.append('title', document.getElementById('title').value);
+  formData.append('category', document.getElementById('category').value);
+  formData.append('type', 'sale');
+  formData.append('address', document.getElementById('address').value);
+  formData.append('city', document.getElementById('address').value);
+  formData.append('price', document.getElementById('price').value);
+  formData.append('description', document.getElementById('description').value);
+
+  const imageFile = document.getElementById('images').files[0];
+  if(imageFile) formData.append('images', imageFile);
+
+  fetch('http://localhost:5000/api/properties', {
+    method: 'POST',
+    headers: {
+      'Authorization': Bearer ${token}
+    },
+    body: formData
+  })
+  .then(res => res.json())
+  .then(response => {
+    if(response.property) {
+      alert('Property Registered Successfully! ✅');
+      window.location.href = 'index.html';
+    } else {
+      alert(response.message);
+    }
+  })
+  .catch(err => alert('Server se connect nahi ho raha!'));
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:60px;
+   
+    position : sticky;
+    
+    } 
+
+
+nav ul{
+    display: flex;
+    
+    justify-content: center;
+    } 
+
+nav ul li{ 
+  
+    list-style: none;
+    margin: 0 23px; 
+    
+
+     
+a{
+    color: black;
+    text-decoration: none;
+    transition:color 0.5s;
+    
+}
+a:hover{
+    color: #0ef;
+}
+}
+.register-link {
+    display: inline-block;
+    background: linear-gradient(90deg, #4f8ffb 0%, #6a4cff 100%);
+    color: #fff;
+    padding: 12px 30px;
+    margin: 40px auto;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.register-link:hover {
+    background: linear-gradient(90deg, #6a4cff 0%, #4f8ffb 100%);
+}
+.form-container {
+    background-color: rgb(127, 197, 255);
+    max-width: 450px;
+    margin: 60px auto;
+    padding: 35px 30px 30px 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(40, 112, 233, 0.14);
+    border: 1px solid #eee;
+}
+h1 {
+    text-align: center;
+    color: #2a47d0;
+    margin-bottom: 32px;
+    font-size: 2rem;
+}
+form label {
+    display: block;
+    margin-bottom: 7px;
+    color: #333;
+    font-weight: 500;
+}
+form input, form select, form textarea {
+    width: 100%;
+    padding: 9px 10px;
+    margin-bottom: 18px;
+    border: 1px solid #a0c4ff;
+    border-radius: 7px;
+    background: #f9fdff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+form input:focus, form select:focus, form textarea:focus {
+    border-color: #4f8ffb;
+    outline: none;
+}
+form button[type="submit"] {
+    background: linear-gradient(90deg, #4f8ffb 0%, #6a4cff 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #6a4cff 0%, #4f8ffb 100%);
+}
+@media (max-width: 520px) {
+    .form-container {
+        padding: 18px 5px;
+        max-width: 98vw;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+   
+/* 📱 1️⃣ Mobile Phones (up to 480px width) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  header, nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container, section, footer {
+    width: 100%;
+    padding: 10px;
+  }
+
+  button, a {
+    width: 100%;
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/* 💊 2️⃣ Tablets (481px–768px width) */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container {
+    max-width: 95%;
+    margin: auto;
+  }
+
+  .grid-2, .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+
+/* 💻 3️⃣ Laptops aur bade screens (min 1024px) */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+

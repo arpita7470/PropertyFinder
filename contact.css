@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*  Page Base */
+body {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+}
+
+/*  Navbar */
+nav {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+ 
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color:white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0ef;
+}
+
+/*  Heading */
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+}
+
+/*  Description */
+.contact-text {
+  text-align: center;
+  color: #ddd;
+  font-size: 1.1rem;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+/*  Left Form Section */
+.left {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 25px;
+  width: 45%;
+  margin: 30px;
+}
+
+label {
+  font-size: 1.1rem;
+  margin-top: 15px;
+  color: #fff;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #0ef;
+}
+
+button {
+  margin-top: 20px;
+  margin-left: 40%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0ef;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #08c;
+  color: #fff;
+}
+
+/*  Right Side (Owner Info) */
+.right {
+  text-align: center;
+  width: 40%;
+  margin: 30px;
+}
+
+.owner-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 238, 255, 0.4);
+}
+
+.right h3 {
+  margin-top: 15px;
+}
+
+.right p {
+  color: #ccc;
+}
+
+/* Container to hold both sides */
+.page-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* 📞 Contact Info */
+.contact-info {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-info p {
+  color: #fff;
+  font-size: 18px;
+}
+
+/*  Social Icons */
+.social-icons {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #0ef;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left, .right {
+    width: 90%;
+    margin: 10px 0;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+    
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    flex-wrap: wrap;   
+}
+
+@media (max-width: 768px) {
+  .left{
+    margin-top: 40px;
+  }
+    .right {
+        margin-top: 70px;   
+    }
+}
