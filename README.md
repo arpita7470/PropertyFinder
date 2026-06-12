@@ -4,7 +4,7 @@
 ---
 
 ## 🌐 Live Project & Links
-* 🚀 **Live Deployment:** [View Live Web App](YOUR_LIVE_DEPLOYMENT_LINK_HERE)
+* 🚀 **Live Deployment:** [View Live Web App](https://arpita7470.github.io/PropertyFinder/)
 * 📂 **Repository Link:** [GitHub Repo](https://github.com/arpita7470/PropertyFinder)
 
 ---
